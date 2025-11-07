@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background-image: url("/assets/images/bg-weather.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+    color: white;
+}
+
+.home {
+    padding: 4rem 11rem;
+  
+
+    
+
+    &__logo {
+        margin-bottom: 32rem;
+    }
+
+    &__degrees {
+        display: flex;
+    }
+
+
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 2.6rem;
+
+        h1 {
+            font-size: 8rem;
+        }
+   
+
+        span {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+
+    }
+}

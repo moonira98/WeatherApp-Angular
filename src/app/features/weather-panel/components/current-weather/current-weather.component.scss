@@ -1,0 +1,20 @@
+.current-weather {
+    margin-top: 3rem;
+
+    h4 {
+        margin-bottom: 3rem;
+    }
+
+    &__feature {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.9rem;
+    }
+
+    &__degrees {
+        display: flex;
+        align-items: end;
+        gap: 1rem
+    }
+}

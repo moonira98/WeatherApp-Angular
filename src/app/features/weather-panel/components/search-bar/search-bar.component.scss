@@ -1,0 +1,25 @@
+.search-bar {
+  color: white;
+
+  .search-bar__input {
+    input {
+        width: 24rem;
+    }
+
+    input.p-inputtext {
+      background-color: transparent;
+      color: white;
+    
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    }
+
+    p {
+        margin-top: 1.8rem;
+    }
+}
+
+
