@@ -1,25 +1,39 @@
 .search-bar {
-  color: white;
+  color: var(--primary-color);
 
   .search-bar__input {
     input {
-        width: 24rem;
+      width: 22rem;
     }
 
     input.p-inputtext {
       background-color: transparent;
-      color: white;
-    
+
 
       &::placeholder {
-        color: rgba(255, 255, 255, 0.7);
+        color: (--primary-color)
       }
     }
+  }
+
+  p {
+    margin-top: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+
+    input {
+      display: none;
+    }
+
+    p-iconfield {
+      display: none;
     }
 
     p {
-        margin-top: 1.8rem;
+      text-align: center;
     }
+  }
 }
-
-

@@ -1,7 +1,7 @@
 .weather-details {
     margin-top: 6rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--primary-color);
 
     h4 {
         margin-bottom: 2rem;
@@ -20,4 +20,14 @@
     gap: 1rem
    }
   
+}
+
+ @media (max-width: 768px) { 
+    .weather-details {
+        margin-top: 3rem;
+
+        h4 {
+            text-align: center;
+        }
+    }
 }

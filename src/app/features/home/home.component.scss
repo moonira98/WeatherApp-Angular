@@ -1,31 +1,36 @@
 :host {
-  display: block;
-  min-height: 100vh;
-  background-image: url("/assets/images/bg-weather.png");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: space-between;
-    color: white;
+    min-height: 100vh;
+    background-image: url("/assets/images/bg-weather.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    gap: 27rem;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    :host {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    
 }
 
 .home {
     padding: 4rem 11rem;
-  
 
-    
-
-    &__logo {
-        margin-bottom: 32rem;
+    &__search-bar {
+        display: none;
     }
 
     &__degrees {
         display: flex;
     }
 
-
-
     &__info {
+        margin-top: 36rem;
         display: flex;
         align-items: center;
         gap: 2.6rem;
@@ -33,7 +38,7 @@
         h1 {
             font-size: 8rem;
         }
-   
+
 
         span {
             font-size: 4rem;
@@ -43,6 +48,84 @@
             font-size: 1.2rem;
         }
 
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        padding: 2rem 2rem;
+        height: 28rem;
+
+        &__search-bar {
+            display: block;
+            margin-left: 12rem;
+            width: 10rem;
+
+            input.p-inputtext {
+                background-color: transparent;
+
+                 &::placeholder {
+                    color: rgba(255, 255, 255, 0.7);
+                }
+            }
+
+        }
+
+        &__info {
+            margin-top: 15rem;
+            gap: 1rem;
+        }
+
+        h1 {
+            font-size: 6rem;
+        }
+
+        span {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+}
+
+@media (max-width: 480px) {
+    .home {
+        background-image: url("/assets/images/bg-weather.png");
+        background-size: cover;
+        background-position: center; 
+
+   
+
+      
+
+          &__info {
+            margin-top: 16rem;
+
+              h1 {
+            font-size: 4rem;
+        }
+
+        span {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 0.5rem;
+        }
+
+        img {
+            height: 3rem;
+        }
+        }
+
+      
+
+        
 
     }
 }
+
+
