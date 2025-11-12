@@ -1,16 +1,25 @@
+:host {
+    width: 30%;
+}
 .weather-panel {
-    width: 37rem;
+ 
     display: block;
     min-height: 100vh;
-    background-image: url("/assets/images/bg-blur.png");
+    backdrop-filter: blur(7px);
+
+    // background-image: url("/assets/images/bg-blur.png");
     background-size: cover;
     background-position: center;
-    padding: 3rem 13rem 0 3rem;
+    padding: 3rem 3rem 0 3rem;
 
 }
 
 @media (max-width: 480px) {
     .weather-panel {
-        width: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
     }
 } 

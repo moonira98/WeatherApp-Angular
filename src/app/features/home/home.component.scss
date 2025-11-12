@@ -4,23 +4,22 @@
     background-size: cover;
     background-position: center;
     display: flex;
-    gap: 27rem;
+    justify-content: space-between;
+ 
     color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
     :host {
         display: block;
+       
     }
 }
 
-@media (max-width: 480px) {
-    
-}
 
 .home {
-    padding: 4rem 11rem;
-
+    // padding: 4rem 11rem;
+width: 50%;
     &__search-bar {
         display: none;
     }
@@ -30,13 +29,15 @@
     }
 
     &__info {
-        margin-top: 36rem;
+        margin-top: 38rem;
         display: flex;
         align-items: center;
-        gap: 2.6rem;
+       justify-content: flex-start;
+       gap: 1rem;
+       padding: 0 5% 0 18%;
 
         h1 {
-            font-size: 8rem;
+            font-size: 6rem;
         }
 
 
@@ -53,16 +54,17 @@
 
 @media (max-width: 768px) {
     .home {
+      width: 100%;
         padding: 2rem 2rem;
         height: 28rem;
-
+        
         &__search-bar {
-            display: block;
-            margin-left: 12rem;
-            width: 10rem;
+            display: flex;
+            justify-content: flex-end;
 
             input.p-inputtext {
                 background-color: transparent;
+                width: 15rem;
 
                  &::placeholder {
                     color: rgba(255, 255, 255, 0.7);
@@ -74,6 +76,7 @@
         &__info {
             margin-top: 15rem;
             gap: 1rem;
+            justify-content: flex-start;
         }
 
         h1 {
@@ -93,12 +96,26 @@
 
 @media (max-width: 480px) {
     .home {
-        background-image: url("/assets/images/bg-weather.png");
-        background-size: cover;
-        background-position: center; 
+       display: flex;
+       flex-direction: column;
 
-   
 
+
+        &__search-bar {
+            display: block;
+            align-self: end;
+
+            input.p-inputtext {
+                background-color: transparent;
+                width: 14rem;
+              
+
+                 &::placeholder {
+                    color: rgba(255, 255, 255, 0.7);
+                }
+            }
+
+        }
       
 
           &__info {
