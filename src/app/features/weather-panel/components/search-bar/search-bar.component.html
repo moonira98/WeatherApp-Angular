@@ -2,7 +2,8 @@
   <div class="search-bar__input" >
     <p-iconfield>
         <p-inputicon styleClass="pi pi-search" />
-        <input type="text" pInputText placeholder="Search Location" ([ngModel])="city" />
+        <input type="text" pInputText placeholder="Search Location" [(ngModel)]="intervalCity"  />
+       <p>{{city()}}</p>
     </p-iconfield>
    
 </div>

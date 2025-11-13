@@ -11,8 +11,10 @@
 
 
       &::placeholder {
-        color: white;
+        color: var(--primary-color);
       }
+
+
     }
   }
 

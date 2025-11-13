@@ -1,9 +1,9 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { SearchBarComponent } from "./components/search-bar/search-bar.component";
 import { WeatherDetailsComponent } from "./components/weather-details/weather-details.component";
 import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
 import { Weather } from '../../services/weather';
-import { CityWeather, FindWeatherResponse } from '../../models/iweather';
+
 
 @Component({
   selector: 'app-weather-panel',
@@ -11,21 +11,23 @@ import { CityWeather, FindWeatherResponse } from '../../models/iweather';
   templateUrl: './weather-panel.component.html',
   styleUrl: './weather-panel.component.scss'
 })
-export class WeatherPanelComponent  {
-  city!: CityWeather[];
-
-  ngOnInit(): void {
-   this.getC()
-  }
-  weatherS = inject(Weather)
+export class WeatherPanelComponent implements OnInit {
+ city = signal<string>('')
+ weatherService = inject(Weather)
  
+  ngOnInit(): void {
+   this.getWeather()
+ }
 
-   getC() {
-    this.weatherS.getCities().subscribe((res: FindWeatherResponse ) => {
-      this.city = res.list
-      console.log(this.city)
-    }) 
-  
+
+ getWeather() {
+  if(this.city()) {
+     this.weatherService.getWeather(this.city()).subscribe((res) => {
+    console.log(res)
+  })
   }
+ 
+ }
+
 
 }

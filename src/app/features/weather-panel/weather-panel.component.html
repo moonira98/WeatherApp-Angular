@@ -1,5 +1,6 @@
 <div class="weather-panel">
-    <app-search-bar [city]="city"></app-search-bar>
-    <app-weather-details [city]="city" ></app-weather-details>
+    <p>{{city()}}</p>
+    <app-search-bar [(city)]="city"></app-search-bar>
+    <!-- <app-weather-details ></app-weather-details> -->
     <app-current-weather></app-current-weather>
 </div>

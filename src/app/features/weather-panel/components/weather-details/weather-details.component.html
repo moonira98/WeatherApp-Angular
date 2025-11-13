@@ -5,35 +5,35 @@
             <div class="weather-details__feature">
                 <p>Temp max</p>
                 <div class="weather-details__degrees">
-                    <!-- <span>{{city[0].main.temp_max}}&deg;</span> -->
+                    <span>{{city[0].main.temp_max}}&deg;</span>
                     <img src="/assets/images/hot-temp.png">
                 </div>
             </div>
             <div class="weather-details__feature">
                 <p>Temp min</p>
                 <div class="weather-details__degrees">
-                    <span>15&deg;</span>
+                    <span>{{city[0].main.temp_min}}&deg;</span>
                     <img src="/assets/images/temp-blue.png">
                 </div>
             </div>
             <div class="weather-details__feature">
                 <p>Humadity</p>
                 <div class="weather-details__degrees">
-                    <span>58%</span>
+                    <span>{{city[0].main.humidity}}</span>
                     <img src="/assets/images/drop.png">
                 </div>
             </div>
             <div class="weather-details__feature">
                 <p>Cloudy</p>
                 <div class="weather-details__degrees">
-                    <span>86%</span>
+                    <span>{{city[0].clouds.all}}</span>
                     <img src="/assets/images/mini-cloud.png">
                 </div>
             </div>
              <div class="weather-details__feature">
                 <p>Wind</p>
                 <div class="weather-details__degrees">
-                    <span>5km/h</span>
+                    <span>{{city[0].wind.speed}}</span>
                     <img src="/assets/images/wind (2).png">
                 </div>
             </div>
