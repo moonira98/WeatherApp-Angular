@@ -1,11 +1,11 @@
-@for(detail of city; track detail.id) {
+
     <div class="weather-details">
         <h4>THUNDERSTORM WITH LIGHT DRIZZLE</h4>
         <div class="weather-details__content">
             <div class="weather-details__feature">
                 <p>Temp max</p>
                 <div class="weather-details__degrees">
-                    <span>{{detail.main.temp_max}}&deg;</span>
+                    <!-- <span>{{city[0].main.temp_max}}&deg;</span> -->
                     <img src="/assets/images/hot-temp.png">
                 </div>
             </div>
@@ -40,6 +40,5 @@
         </div>
         
     </div>
-}
 
 
