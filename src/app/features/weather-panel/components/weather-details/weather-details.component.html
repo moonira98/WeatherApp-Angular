@@ -1,41 +1,45 @@
-<div class="weather-details">
-    <h4>THUNDERSTORM WITH LIGHT DRIZZLE</h4>
-    <div class="weather-details__content">
-        <div class="weather-details__feature">
-            <p>Temp max</p>
-            <div class="weather-details__degrees">
-                <span>19&deg;</span>
-                <img src="/assets/images/hot-temp.png">
+@for(detail of city; track detail.id) {
+    <div class="weather-details">
+        <h4>THUNDERSTORM WITH LIGHT DRIZZLE</h4>
+        <div class="weather-details__content">
+            <div class="weather-details__feature">
+                <p>Temp max</p>
+                <div class="weather-details__degrees">
+                    <span>{{detail.main.temp_max}}&deg;</span>
+                    <img src="/assets/images/hot-temp.png">
+                </div>
+            </div>
+            <div class="weather-details__feature">
+                <p>Temp min</p>
+                <div class="weather-details__degrees">
+                    <span>15&deg;</span>
+                    <img src="/assets/images/temp-blue.png">
+                </div>
+            </div>
+            <div class="weather-details__feature">
+                <p>Humadity</p>
+                <div class="weather-details__degrees">
+                    <span>58%</span>
+                    <img src="/assets/images/drop.png">
+                </div>
+            </div>
+            <div class="weather-details__feature">
+                <p>Cloudy</p>
+                <div class="weather-details__degrees">
+                    <span>86%</span>
+                    <img src="/assets/images/mini-cloud.png">
+                </div>
+            </div>
+             <div class="weather-details__feature">
+                <p>Wind</p>
+                <div class="weather-details__degrees">
+                    <span>5km/h</span>
+                    <img src="/assets/images/wind (2).png">
+                </div>
             </div>
         </div>
-        <div class="weather-details__feature">
-            <p>Temp min</p>
-            <div class="weather-details__degrees">
-                <span>15&deg;</span>
-                <img src="/assets/images/temp-blue.png">
-            </div>
-        </div>
-        <div class="weather-details__feature">
-            <p>Humadity</p>
-            <div class="weather-details__degrees">
-                <span>58%</span>
-                <img src="/assets/images/drop.png">
-            </div>
-        </div>
-        <div class="weather-details__feature">
-            <p>Cloudy</p>
-            <div class="weather-details__degrees">
-                <span>86%</span>
-                <img src="/assets/images/mini-cloud.png">
-            </div>
-        </div>
-         <div class="weather-details__feature">
-            <p>Wind</p>
-            <div class="weather-details__degrees">
-                <span>5km/h</span>
-                <img src="/assets/images/wind (2).png">
-            </div>
-        </div>
+        
     </div>
-    
-</div>
+}
+
+
