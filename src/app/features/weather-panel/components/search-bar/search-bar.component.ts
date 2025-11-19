@@ -15,11 +15,5 @@ import { interval } from 'rxjs';
 })
 export class SearchBarComponent {
   city = model<string>('')
-  get intervalCity(): string {
-    return this.city()
-  }
-
-  set intervalCity(newCity: string) {
-    this.city.set(newCity)
-  }
+ 
 }
